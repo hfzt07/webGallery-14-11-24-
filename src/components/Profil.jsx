@@ -131,7 +131,7 @@ const JurusanSection = styled.div`
   background: linear-gradient(
     rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0.8)
-  ), url('/images/jurusan.png');
+  ), url('/webGallery-02-11-24-/images/jurusan.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -419,42 +419,42 @@ function Profil() {
       id: 1,
       judul: "Prestasi Gemilang di Olimpiade Sains",
       tanggal: "15 Februari 2024",
-      gambar: "/images/berita/berita1.jpg",
+      gambar: "/webGallery-02-11-24-/images/berita/berita1.jpg",
       ringkasan: "Siswa SMKN 1 Bulan meraih medali emas dalam Olimpiade Sains Nasional bidang Informatika."
     },
     {
       id: 2,
       judul: "Workshop Teknologi AI",
       tanggal: "10 Februari 2024",
-      gambar: "/images/berita/berita2.jpg",
+      gambar: "/webGallery-02-11-24-/images/berita/berita2.jpg",
       ringkasan: "Mengadakan workshop teknologi AI untuk meningkatkan kompetensi siswa dalam era digital."
     },
     {
       id: 3,
       judul: "Kerjasama dengan Industri",
       tanggal: "5 Februari 2024",
-      gambar: "/images/berita/berita3.jpg",
+      gambar: "/webGallery-02-11-24-/images/berita/berita3.jpg",
       ringkasan: "Menjalin kerjasama dengan perusahaan teknologi untuk program magang siswa."
     },
     {
       id: 4,
       judul: "Penghargaan Sekolah Adiwiyata",
       tanggal: "1 Februari 2024",
-      gambar: "/images/berita/berita4.jpg",
+      gambar: "/webGallery-02-11-24-/images/berita/berita4.jpg",
       ringkasan: "SMKN 1 Bulan menerima penghargaan sebagai sekolah berwawasan lingkungan."
     },
     {
       id: 5,
       judul: "Juara Umum Lomba Robotik",
       tanggal: "28 Januari 2024",
-      gambar: "/images/berita/berita5.jpg",
+      gambar: "/webGallery-02-11-24-/images/berita/berita5.jpg",
       ringkasan: "Tim robotik sekolah berhasil meraih juara umum dalam kompetisi robotik tingkat nasional."
     },
     {
       id: 6,
       judul: "Pelatihan Digital Marketing",
       tanggal: "25 Januari 2024",
-      gambar: "/images/berita/berita6.jpg",
+      gambar: "/webGallery-02-11-24-/images/berita/berita6.jpg",
       ringkasan: "Siswa jurusan Bisnis Digital mengikuti pelatihan intensif bersama praktisi industri."
     }
   ];
