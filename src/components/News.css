@@ -1,0 +1,29 @@
+.news-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 1rem;
+  background: white;
+}
+
+.news-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.news-image:hover {
+  transform: scale(1.05);
+}
+
+.news-content {
+  padding: 1rem;
+}
+ 

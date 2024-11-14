@@ -5,14 +5,16 @@ import { motion } from 'framer-motion';
 const ProgramSection = styled.section`
   padding: 6rem 2rem;
   background: #0f0f1a;
+  overflow: hidden;
 `;
 
 const ProgramGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
+  position: static;
 `;
 
 const ProgramCard = styled(motion.div)`
@@ -45,9 +47,24 @@ const SectionTitle = styled(motion.h2)`
 function Programs() {
   return (
     <ProgramSection>
+      <SectionTitle
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
+      >
+        Ekstrakulikuler
+      </SectionTitle>
       <ProgramGrid>
-        <ProgramCard>
-          {/* Isi konten di sini */}
+        <ProgramCard initial={{ opacity: 1 }} animate={{ opacity: 1 }}>
+          <h3>Pramuka</h3>
+          <p>Kegiatan kepanduan yang mengembangkan karakter dan keterampilan hidup.</p>
+        </ProgramCard>
+        <ProgramCard initial={{ opacity: 1 }} animate={{ opacity: 1 }}>
+          <h3>PMR</h3>
+          <p>Palang Merah Remaja untuk pendidikan kesehatan dan pertolongan pertama.</p>
+        </ProgramCard>
+        <ProgramCard initial={{ opacity: 1 }} animate={{ opacity: 1 }}>
+          <h3>Futsal</h3>
+          <p>Olahraga tim yang mengembangkan keterampilan sepak bola dan kerja sama tim.</p>
         </ProgramCard>
       </ProgramGrid>
     </ProgramSection>

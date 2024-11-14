@@ -110,10 +110,10 @@ function Berita() {
   ];
 
   return (
-    <BeritaSection>
+    <BeritaSection >
       <BeritaContainer>
         <BeritaHeader>Berita Terkini</BeritaHeader>
-        <BeritaGrid>
+        <BeritaGrid id="berita">
           {beritaItems.map((item) => (
             <BeritaCard
               key={item.id}

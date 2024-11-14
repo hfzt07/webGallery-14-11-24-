@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { getImagePath } from '../utils/imagePath';
 
 const ProfilSection = styled.section`
-  padding: 8rem 2rem;
+  padding: 4rem 2rem;
   background: #1a1a2e;
   position: relative;
 
@@ -31,99 +31,24 @@ const ProfilContainer = styled.div`
   margin: 0 auto;
 `;
 
-const Title = styled.h2`
+const SectionTitle = styled.h2`
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #1a1a2e;
-`;
-
-const VisiMisiContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  font-size: 2.8rem;
+  margin-bottom: 4rem;
+  color: #00ff87;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 255, 135, 0.2);
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const VisiCard = styled(motion.div)`
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 2.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  height: 100%;
-
-  h3 {
-    color: #00ff87;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    &::before {
-      content: '🎯';
-      font-size: 2rem;
-    }
-  }
-
-  p {
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.8;
-    font-size: 1.1rem;
-    text-align: justify;
-  }
-`;
-
-const MisiCard = styled(motion.div)`
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 2.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-
-  h3 {
-    color: #00ff87;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    &::before {
-      content: '🚀';
-      font-size: 2rem;
-    }
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  li {
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-    position: relative;
-    line-height: 1.8;
-    font-size: 1.1rem;
-
-    &::before {
-      content: '✨';
-      position: absolute;
-      left: 0;
-      color: #00ff87;
-    }
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
   }
 `;
 
 const JurusanSection = styled.div`
-  margin-top: 4rem;
+  padding: 4rem 0;
+  margin-top: 0;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   width: 100vw;
@@ -131,7 +56,7 @@ const JurusanSection = styled.div`
   background: linear-gradient(
     rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0.8)
-  ), url('/webGallery-02-11-24-/images/jurusan.png');
+  ), url('https://raw.githubusercontent.com/hfzt07/dbweb/main/jurusan.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -213,20 +138,8 @@ const JurusanCard = styled(motion.div)`
   }
 `;
 
-const SubTitle = styled.h2`
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  background: linear-gradient(to right, #00ff87, #60efff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
-// Tambahkan styled components untuk bagian berita
 const BeritaSection = styled.div`
-  margin-top: 4rem;
   padding: 4rem 0;
-  background: rgba(255, 255, 255, 0.02);
 `;
 
 const BeritaContainer = styled.div`
@@ -247,10 +160,17 @@ const BeritaGrid = styled.div`
 `;
 
 const BeritaUtama = styled(motion.div)`
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(0, 255, 135, 0.1);
+  }
 
   .image-container {
     width: 100%;
@@ -266,25 +186,25 @@ const BeritaUtama = styled(motion.div)`
   }
 
   .content {
-    padding: 1.2rem;
+    padding: 1.5rem;
     
     h3 {
       color: #00ff87;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
       font-size: 1.3rem;
     }
 
     .date {
       color: rgba(255, 255, 255, 0.6);
       font-size: 0.9rem;
-      margin-bottom: 0.6rem;
+      margin-bottom: 1rem;
     }
 
     p {
       color: rgba(255, 255, 255, 0.8);
-      line-height: 1.5;
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
+      line-height: 1.6;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -295,18 +215,6 @@ const BeritaUtama = styled(motion.div)`
   &:hover {
     .image-container img {
       transform: scale(1.1);
-    }
-  }
-
-  @media (max-width: 768px) {
-    .image-container {
-      height: 200px;
-    }
-
-    .content {
-      h3 {
-        font-size: 1.1rem;
-      }
     }
   }
 `;
@@ -323,11 +231,18 @@ const BeritaSamping = styled(motion.div)`
   display: grid;
   grid-template-columns: 90px 1fr;
   gap: 0.8rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   height: 90px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(0, 255, 135, 0.1);
+  }
 
   .image-container {
     width: 90px;
@@ -343,16 +258,16 @@ const BeritaSamping = styled(motion.div)`
   }
 
   .content {
-    padding: 0.6rem;
+    padding: 0.8rem 1rem 0.8rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     
     h3 {
       color: #00ff87;
-      margin-bottom: 0.3rem;
-      font-size: 0.85rem;
-      line-height: 1.3;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -361,23 +276,13 @@ const BeritaSamping = styled(motion.div)`
 
     .date {
       color: rgba(255, 255, 255, 0.6);
-      font-size: 0.7rem;
+      font-size: 0.75rem;
     }
   }
 
   &:hover {
     .image-container img {
       transform: scale(1.1);
-    }
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: 70px 1fr;
-    height: 70px;
-
-    .image-container {
-      width: 70px;
-      height: 70px;
     }
   }
 `;
@@ -391,6 +296,217 @@ const BeritaButton = styled(motion.button)`
   font-weight: bold;
   cursor: pointer;
   font-size: 0.85rem;
+`;
+
+const ProfileGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin: 0 auto 5rem;
+  max-width: 1100px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+`;
+
+const LeftCard = styled(motion.div)`
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  height: 100%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(0, 255, 135, 0.1);
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 255, 135, 0.3);
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+  }
+
+  h3 {
+    color: #00ff87;
+    margin-bottom: 1.8rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    font-size: 1.15rem;
+    letter-spacing: 0.3px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    
+    .image-container {
+      width: 150px;
+      height: 150px;
+    }
+  }
+`;
+
+const RightColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+`;
+
+const RightCard = styled(motion.div)`
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(0, 255, 135, 0.1);
+  }
+
+  .content {
+    flex: 1;
+
+    h3 {
+      color: #00ff87;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.8;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+
+  .image-container {
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 3px;
+      border-radius: 15px;
+      background: linear-gradient(
+        45deg,
+        #00ff87,
+        #60efff,
+        #00ff87
+      );
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      animation: borderRotate 4s linear infinite;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 255, 135, 0.1) 100%
+      );
+      z-index: 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      filter: contrast(1.1) brightness(1.1);
+    }
+
+    &:hover img {
+      transform: scale(1.15);
+    }
+  }
+
+  @keyframes borderRotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 2.5rem;
+    gap: 2rem;
+    
+    .image-container {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    
+    .content p {
+      text-align: justify;
+    }
+    
+    .image-container {
+      width: 140px;
+      height: 140px;
+    }
+  }
 `;
 
 function Profil() {
@@ -419,42 +535,42 @@ function Profil() {
       id: 1,
       judul: "Prestasi Gemilang di Olimpiade Sains",
       tanggal: "15 Februari 2024",
-      gambar: "/webGallery-02-11-24-/images/berita/berita1.jpg",
+      gambar: "/images/berita/berita1.jpg",
       ringkasan: "Siswa SMKN 1 Bulan meraih medali emas dalam Olimpiade Sains Nasional bidang Informatika."
     },
     {
       id: 2,
       judul: "Workshop Teknologi AI",
       tanggal: "10 Februari 2024",
-      gambar: "/webGallery-02-11-24-/images/berita/berita2.jpg",
+      gambar: "/images/berita/berita2.jpg",
       ringkasan: "Mengadakan workshop teknologi AI untuk meningkatkan kompetensi siswa dalam era digital."
     },
     {
       id: 3,
       judul: "Kerjasama dengan Industri",
       tanggal: "5 Februari 2024",
-      gambar: "/webGallery-02-11-24-/images/berita/berita3.jpg",
+      gambar: "/images/berita/berita3.jpg",
       ringkasan: "Menjalin kerjasama dengan perusahaan teknologi untuk program magang siswa."
     },
     {
       id: 4,
       judul: "Penghargaan Sekolah Adiwiyata",
       tanggal: "1 Februari 2024",
-      gambar: "/webGallery-02-11-24-/images/berita/berita4.jpg",
+      gambar: "/images/berita/berita4.jpg",
       ringkasan: "SMKN 1 Bulan menerima penghargaan sebagai sekolah berwawasan lingkungan."
     },
     {
       id: 5,
       judul: "Juara Umum Lomba Robotik",
       tanggal: "28 Januari 2024",
-      gambar: "/webGallery-02-11-24-/images/berita/berita5.jpg",
+      gambar: "/images/berita/berita5.jpg",
       ringkasan: "Tim robotik sekolah berhasil meraih juara umum dalam kompetisi robotik tingkat nasional."
     },
     {
       id: 6,
       judul: "Pelatihan Digital Marketing",
       tanggal: "25 Januari 2024",
-      gambar: "/webGallery-02-11-24-/images/berita/berita6.jpg",
+      gambar: "/images/berita/berita6.jpg",
       ringkasan: "Siswa jurusan Bisnis Digital mengikuti pelatihan intensif bersama praktisi industri."
     }
   ];
@@ -462,67 +578,72 @@ function Profil() {
   return (
     <ProfilSection id="profil">
       <ProfilContainer>
-        <Title>Profil SMKN 1 Bulan</Title>
+        <SectionTitle>Profil Sekolah</SectionTitle>
         
-        {/* Visi Misi */}
-        <VisiMisiContainer>
-          <VisiCard
+        <ProfileGrid>
+          {/* Kartu Kiri */}
+          <LeftCard
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             whileHover={{ scale: 1.02 }}
           >
-            <h3>Visi</h3>
-            <p>
-              Menjadi lembaga pendidikan teknologi terdepan yang menghasilkan lulusan berkompeten,
-              inovatif, dan berakhlak mulia, siap menjadi pemimpin di era digital.
-            </p>
-          </VisiCard>
+            <div className="content">
+              <h3>SMKN 1 Bulan</h3>
+              <p>
+                Adalah lembaga pendidikan kejuruan unggulan yang berdiri 
+                sejak tahun 2005. Dengan fokus pada bidang teknologi informasi dan 
+                komunikasi, kami telah menghasilkan ribuan lulusan berkualitas yang 
+                kini berkarya di berbagai perusahaan teknologi terkemuka.
+              </p>
+            </div>
+          </LeftCard>
 
-          <MisiCard
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            whileHover={{ scale: 1.02 }}
-          >
-            <h3>Misi</h3>
-            <ul>
-              <motion.li
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                Menyelenggarakan pendidikan berbasis teknologi dengan standar industri
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                Mengembangkan kreativitas dan inovasi dalam pembelajaran
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                Membentuk karakter kepemimpinan dan jiwa wirausaha
-              </motion.li>
-              <motion.li
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                Membangun kerjasama dengan industri dan perguruan tinggi
-              </motion.li>
-            </ul>
-          </MisiCard>
-        </VisiMisiContainer>
+          {/* Kolom Kanan dengan 2 Kartu */}
+          <RightColumn>
+            <RightCard
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="image-container">
+                <img 
+                  src="https://raw.githubusercontent.com/hfzt07/dbweb/main/kepsek.jpg" 
+                  alt="Kepala Sekolah" 
+                />
+              </div>
+              <div className="content">
+                <h3>Sambutan Kepala Sekolah</h3>
+                <p>
+                  "Pengembangan karakter serta etika merupakan komitmen kami 
+                  untuk menghasilkan lulusan yang berkualitas dan berakhlak mulia."
+                </p>
+              </div>
+            </RightCard>
+
+            <RightCard
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="content">
+                <h3>Visi & Misi</h3>
+                <p>
+                  Menjadi lembaga pendidikan teknologi terdepan yang menghasilkan lulusan 
+                  berkompeten, inovatif, dan berakhlak mulia untuk membangun masa depan 
+                  Indonesia yang lebih baik.
+                </p>
+              </div>
+            </RightCard>
+          </RightColumn>
+        </ProfileGrid>
 
         {/* Berita Section */}
         <BeritaSection id="berita">
           <BeritaContainer>
-            <SubTitle>Berita Terkini</SubTitle>
+            <SectionTitle>Berita Terkini</SectionTitle>
             <BeritaGrid>
               {/* Berita Utama */}
               <BeritaUtama
@@ -574,7 +695,7 @@ function Profil() {
         {/* Program Keahlian */}
         <JurusanSection id="jurusan">
           <JurusanContainer>
-            <SubTitle>Program Keahlian</SubTitle>
+            <SectionTitle>Program Keahlian</SectionTitle>
             <JurusanGrid>
               {jurusan.map((item, index) => (
                 <JurusanCard

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { getImagePath } from '../utils/imagePath';
 
 const FasilitasSection = styled.section`
-  padding: 8rem 2rem;
+  padding: 4rem 2rem;
   background: #1a1a2e;
 `;
 
@@ -13,11 +13,19 @@ const FasilitasContainer = styled.div`
   margin: 0 auto;
 `;
 
-const Title = styled.h2`
+const SectionTitle = styled.h2`
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 4rem;
-  color: #1a1a2e;
+  color: #00ff87;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 255, 135, 0.2);
+
+  @media (max-width: 768px) {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
 `;
 
 const FasilitasGrid = styled.div`
@@ -82,54 +90,54 @@ function Fasilitas() {
     {
       nama: "Perpustakaan Digital",
       deskripsi: "Perpustakaan dengan koleksi buku digital dan area belajar yang nyaman",
-      image: "/images/fasilitas/perpustakaan.jpg"
+      image: "https://raw.githubusercontent.com/hfzt07/dbweb/main/perpustakaan.jpg"
     },
     {
       nama: "Laboratorium Komputer",
       deskripsi: "Lab komputer modern dengan perangkat terbaru untuk praktik pemrograman dan desain",
-      image: "/images/fasilitas/lab-komputer.jpg"
+      image: "https://raw.githubusercontent.com/hfzt07/dbweb/main/lab-komputer.jpg"
     },
     {
       nama: "Studio Multimedia",
       deskripsi: "Studio produksi dengan peralatan profesional untuk praktik multimedia",
-      image: "/images/fasilitas/studio.jpg"
+      image: "https://raw.githubusercontent.com/hfzt07/dbweb/main/studio.jpg"
     },
     {
       nama: "Ruang Praktik Jaringan",
       deskripsi: "Ruang praktik dengan peralatan jaringan lengkap untuk pembelajaran TKJ",
-      image: "/images/fasilitas/lab-jaringan.jpg"
+      image: "https://raw.githubusercontent.com/hfzt07/dbweb/main/lab-jaringan.jpg"
     },
     {
       nama: "Aula Serbaguna",
       deskripsi: "Ruang serba guna untuk berbagai kegiatan sekolah dan event",
-      image: "/images/fasilitas/aula.jpg"
+      image: "https://raw.githubusercontent.com/hfzt07/dbweb/main/aula.jpg"
     },
     {
       nama: "Lapangan Olahraga",
       deskripsi: "Fasilitas olahraga lengkap untuk kegiatan fisik dan ekstrakurikuler",
-      image: "/images/fasilitas/lapangan.jpg"
+      image: "https://raw.githubusercontent.com/hfzt07/dbweb/main/lapangan.jpg"
     },
     {
       nama: "Kantin Sehat",
       deskripsi: "Area makan yang bersih dan nyaman dengan menu sehat dan bergizi",
-      image: "/images/fasilitas/kantin.jpg"
+      image: "https://raw.githubusercontent.com/hfzt07/dbweb/main/kantin.jpg"
     },
     {
       nama: "Taman Sosial",
       deskripsi: "Ruang terbuka hijau untuk interaksi sosial dan kegiatan outdoor",
-      image: "/images/fasilitas/taman.jpg"
+      image: "https://raw.githubusercontent.com/hfzt07/dbweb/main/taman.jpg"
     },
     {
       nama: "Titik Internet",
       deskripsi: "Akses internet berkecepatan tinggi yang tersebar di seluruh area sekolah",
-      image: "/images/fasilitas/wifi.jpg"
+      image: "https://raw.githubusercontent.com/hfzt07/dbweb/main/wifi.jpg"
     }
   ];
 
   return (
     <FasilitasSection id="fasilitas">
       <FasilitasContainer>
-        <Title>Fasilitas Sekolah</Title>
+        <SectionTitle>Fasilitas Sekolah</SectionTitle>
         <FasilitasGrid>
           {fasilitas.map((item, index) => (
             <FasilitasCard
@@ -140,7 +148,7 @@ function Fasilitas() {
               whileHover={{ y: -10 }}
             >
               <div className="image-container">
-                <img src={getImagePath(item.image)} alt={item.nama} />
+                <img src={item.image} alt={item.nama} />
               </div>
               <div className="content">
                 <h3>{item.nama}</h3>

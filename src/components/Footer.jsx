@@ -6,7 +6,7 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 const FooterContainer = styled.footer`
   background: #0f2027;
   color: white;
-  padding: 8rem 2rem 2rem 2rem;
+  padding: 4rem 2rem 2rem 2rem;
 `;
 
 const FooterContent = styled.div`
@@ -120,6 +120,42 @@ const ContactInfo = styled(motion.div)`
   }
 `;
 
+const GoogleMapsContainer = styled.div`
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+  margin: 3rem auto 0;
+  
+  .maps-title {
+    color: #00ff87;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .maps-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 21/9;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+    
+    .maps-wrapper {
+      aspect-ratio: 16/9;
+    }
+  }
+`;
+
 function Footer() {
   const currentYear = new Date().getFullYear();
   
@@ -130,16 +166,16 @@ function Footer() {
           <h3>SMKN 1 Bulan</h3>
           <p>Membentuk generasi digital yang inovatif dan berkarakter untuk masa depan Indonesia.</p>
           <SocialLinks>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="facebook">
+            <a href="https://www.facebook.com/grizelleana/" target="_blank" rel="noopener noreferrer" className="facebook">
               <FaFacebookF />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="instagram">
+            <a href="https://www.instagram.com/bernadyaribka/" target="_blank" rel="noopener noreferrer" className="instagram">
               <FaInstagram />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="youtube">
+            <a href="https://www.youtube.com/channel/UCY1bGdpom5tXC9M8-Ahu8dQ" target="_blank" rel="noopener noreferrer" className="youtube">
               <FaYoutube />
             </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="tiktok">
+            <a href="https://www.tiktok.com/@bearnotber?" target="_blank" rel="noopener noreferrer" className="tiktok">
               <FaTiktok />
             </a>
           </SocialLinks>
@@ -161,7 +197,7 @@ function Footer() {
             <li><a href="#beranda">Beranda</a></li>
             <li><a href="#profil">Profil</a></li>
             <li><a href="#berita">Berita</a></li>
-            <li><a href="#program">Program</a></li>
+            <li><a href="#jurusan">Program</a></li>
             <li><a href="#fasilitas">Fasilitas</a></li>
           </ul>
         </FooterSection>
@@ -189,11 +225,25 @@ function Footer() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <span>✉��</span>
+            <span>✉️</span>
             <p>info@smkn1bulan.sch.id</p>
           </ContactInfo>
         </FooterSection>
       </FooterContent>
+
+      <GoogleMapsContainer>
+        <h3 className="maps-title">TEMUKAN KAMI</h3>
+        <div className="maps-wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.666667!2d106.82638889999999!3d-6.175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTAnMzAuMCJTIDEwNsKwNDknMzUuMCJF!5e0!3m2!1sid!2sid!4v1234567890"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <br />
+        <br />
+      </GoogleMapsContainer>
 
       <Copyright>
         <p>&copy; {currentYear} SMKN 1 Bulan. Hak Cipta Dilindungi.</p>

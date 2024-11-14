@@ -112,26 +112,6 @@ const HeroContent = styled(motion.div)`
   }
 `;
 
-const LoginButton = styled(motion.button)`
-  padding: 1rem 2.5rem;
-  font-size: 1.1rem;
-  background: linear-gradient(to right, #00ff87, #60efff);
-  border: none;
-  border-radius: 30px;
-  color: #1a1a2e;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 2rem;
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 4;
-  
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 255, 135, 0.4);
-  }
-`;
-
 function Hero() {
   const opts = {
     height: '100%',
@@ -197,15 +177,6 @@ function Hero() {
         >
           Membentuk Generasi Digital yang Inovatif dan Berkarakter
         </motion.p>
-        <LoginButton
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Login
-        </LoginButton>
       </HeroContent>
     </HeroSection>
   );

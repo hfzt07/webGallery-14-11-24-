@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useLogin } from '../context/LoginContext';
 
 const Nav = styled.nav`
   position: fixed;
@@ -148,6 +149,7 @@ const MobileMenu = styled.div`
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { setShowLogin, isLoggedIn, handleLogout } = useLogin();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -176,7 +178,7 @@ function Navbar() {
     <Nav scrolled={scrolled}>
       <NavContainer>
         <LogoContainer to="/" onClick={() => scrollToSection('beranda')}>
-          <Logo src="/images/logo.png" alt="SMKN 1 Bulan Logo" />
+          <Logo src="https://raw.githubusercontent.com/hfzt07/dbweb/main/logo.png" alt="SMKN 1 Bulan Logo" />
           <SchoolName>SMKN 1 Bulan</SchoolName>
         </LogoContainer>
 
@@ -193,10 +195,18 @@ function Navbar() {
             <NavLink to="/" onClick={() => scrollToSection('fasilitas')}>Fasilitas</NavLink>
           </NavLinks>
           <LoginIcon
+            onClick={() => {
+              if (isLoggedIn) {
+                handleLogout();
+              } else {
+                setShowLogin(true);
+              }
+              setIsMenuOpen(false);
+            }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Login
+            {isLoggedIn ? 'Logout' : 'Login'}
           </LoginIcon>
         </RightSection>
 
@@ -224,10 +234,18 @@ function Navbar() {
             }}>Fasilitas</NavLink>
           </NavLinks>
           <LoginIcon
+            onClick={() => {
+              if (isLoggedIn) {
+                handleLogout();
+              } else {
+                setShowLogin(true);
+              }
+              setIsMenuOpen(false);
+            }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Login
+            {isLoggedIn ? 'Logout' : 'Login'}
           </LoginIcon>
         </MobileMenu>
       </NavContainer>
